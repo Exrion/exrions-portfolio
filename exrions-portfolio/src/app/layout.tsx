@@ -1,20 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Finger_Paint, Gloria_Hallelujah } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
+export const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+export const fingerPaint = Finger_Paint({
+  weight: '400',
+  variable: "--font-finger-paint",
+  subsets: ["latin"],
+});
+
+export const gloriaHallelujah = Gloria_Hallelujah({
+  weight: '400',
+  variable: "--font-gloria-hallelujah",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Exrion's Portfolio",
-  description: "Exrion (Cai Xuan)'s portfolio/personal website!",
+  title: "Cai Xuan's Portfolio",
+  description: "Cai Xuan (Exrion)'s portfolio/personal website!",
 };
 
 export default function RootLayout({
@@ -25,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
