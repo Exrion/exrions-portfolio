@@ -1,5 +1,5 @@
-// import Image from "next/image";
-import { fingerPaint, geistSans, gloriaHallelujah } from "./layout";
+import { geistSans } from "./fonts";
+import HomeScrollSelection from './_Components/homeScrollSelection';
 
 export default function Home() {
   return (
@@ -65,49 +65,7 @@ export default function Home() {
     // </div>
     // #endregion
     <div className={`flex flex-col flex-1 items-center justify-between ${geistSans.className} font-sans pl-6 pr-6 pt-16 pb-16  text-red-600 caret-transparent`}>
-      <div></div>
-      <div className={`flex flex-col items-center gap-4 sm:gap-12 md:gap-16 h-full`}>
-        <div className={`flex flex-row flex-1 justify-start sm:justify-center w-[380px] sm:w-full text-[#101010]`}>
-          <h1 className={`${fingerPaint.className} text-5xl sm:text-center leading-20 whitespace-pre-line md:whitespace-normal`}>
-            Welcome to
-            Cai Xuan's
-            Portfolio
-          </h1>
-        </div>
-        <div className={`flex flex-row flex-1 items-center justify-center gap-1.5 sm:gap-3 md:gap-4 w-full text-[#404040]`}>
-          <h2 className={`${gloriaHallelujah.className} text-3xl text-nowrap`}>
-            Let's visit
-          </h2>
-          <h2 className={`${gloriaHallelujah.className} text-[64px]`}>
-            &#123;
-          </h2>
-          <div className={`flex flex-col flex-1 items-center justify-start pt-8 pb-8 ${gloriaHallelujah.className} mask-y-from-60% mask-y-to-100% text-3xl h-25 gap-3 text-[#202020] overflow-auto no-scrollbar scroll-smooth snap-y`}>
-            <div className={`snap-center`}>
-              <p>
-                About
-              </p>
-            </div>
-            <div className={`snap-center`}>
-              <p>
-                Gallery
-              </p>
-            </div>
-            <div className={`snap-center`}>
-              <p>
-                Showcases
-              </p>
-            </div>
-          </div>
-          <h2 className={`${gloriaHallelujah.className} text-[64px]`}>
-            &#125;
-          </h2>
-        </div>
-      </div>
-      <div>
-        <button>
-          CONTINUE
-        </button>
-      </div>
+      <HomeScrollSelection/>
     </div>
   );
 }
