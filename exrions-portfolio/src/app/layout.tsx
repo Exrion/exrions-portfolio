@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./_Layouts/navbar";
 import Root from "./_Layouts/root";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: "Cai Xuan's Portfolio",
@@ -16,7 +20,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full antialiased`}
+      className={cn("h-full", "antialiased", "font-sans", geist.variable)}
     >
       <meta name="keywords" content="Portfolio, Exrion, Cai Xuan, DigiPen, Software Engineer, Software Developer, Game Designer" />
       <meta name="author" content="Cai Xuan, Exrion" />
