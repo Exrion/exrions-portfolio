@@ -1,4 +1,3 @@
-import { geistSans } from "./fonts";
 import HomeScrollSelection from './_Components/homeScrollSelection';
 
 export default function Home() {
@@ -64,7 +63,7 @@ export default function Home() {
     //   </main>
     // </div>
     // #endregion
-    <div className={`flex flex-col flex-1 items-center justify-between ${geistSans.className} font-sans pl-6 pr-6 pt-16 pb-16  text-red-600 caret-transparent`}>
+    <div className={`flex flex-col flex-1 items-center justify-between pl-6 pr-6 pt-16 pb-16 `}>
       <HomeScrollSelection/>
     </div>
   );

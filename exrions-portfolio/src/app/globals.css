@@ -3,11 +3,28 @@
 :root {
   --background: #FFFDF6;
   --foreground: #202020;
+  --primary-plus: #101010;
+  --primary: #202020;
+  --secondary: #404040;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary-plus: var(--primary-plus);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+
+  /* --animate-pullchain: pullchain 1s ease-in-out 1;
+  @keyframes pullchain {
+    0%,
+    100% {
+      transform: translateY(-25%);
+    }
+    50% {
+      transform: none;
+    }
+  } */
 }
 
 @layer utilities {
