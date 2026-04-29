@@ -5,6 +5,7 @@ import PullChain from "./_Navbar/pullChain";
 import Link from "next/link";
 import { gloriaHallelujah } from "../fonts";
 import CenterUnderline from "@/components/fancy/text/underline-center";
+import { STR_INDEX_ROUTE, STR_INDEX_TITLE, STR_LINK1_ROUTE, STR_LINK1_TITLE, STR_LINK2_ROUTE, STR_LINK2_TITLE, STR_LINK3_ROUTE, STR_LINK3_TITLE } from '../_Utilities/constants';
 
 export default function Navbar() {
     const [navState, setNavState] = useState<boolean>(false)
@@ -20,39 +21,39 @@ export default function Navbar() {
                     <div className={`w-full h-60 z-10 bg-[#FFFDF6] shadow-md`}>
                         <div className={`flex flex-col flex-1 items-center justify-center ${gloriaHallelujah.className} text-primary text-xl gap-6 h-full`}>
                             <Link
-                                href={`/`}
+                                href={STR_INDEX_ROUTE}
                                 onClick={() => { setNavState(false) }}
                                 className={``}
                             >
                                 <CenterUnderline underlinePaddingRatio={0.1}>
-                                    Home
+                                    {STR_INDEX_TITLE}
                                 </CenterUnderline>
                             </Link>
                             <Link
-                                href={`/about`}
+                                href={STR_LINK1_ROUTE}
                                 onClick={() => { setNavState(false) }}
                                 className={``}
                             >
                                 <CenterUnderline underlinePaddingRatio={0.1}>
-                                    About
+                                    {STR_LINK1_TITLE}
                                 </CenterUnderline>
                             </Link>
                             <Link
-                                href={`/gallery`}
+                                href={STR_LINK2_ROUTE}
                                 onClick={() => { setNavState(false) }}
                                 className={``}
                             >
                                 <CenterUnderline underlinePaddingRatio={0.1}>
-                                    Gallery
+                                    {STR_LINK2_TITLE}
                                 </CenterUnderline>
                             </Link>
                             <Link
-                                href={`/showcases`}
+                                href={STR_LINK3_ROUTE}
                                 onClick={() => { setNavState(false) }}
                                 className={``}
                             >
                                 <CenterUnderline underlinePaddingRatio={0.1}>
-                                    Showcases
+                                    {STR_LINK3_TITLE}
                                 </CenterUnderline>
                             </Link>
                         </div>

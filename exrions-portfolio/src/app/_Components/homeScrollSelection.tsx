@@ -2,6 +2,7 @@
 import { fingerPaint, gloriaHallelujah } from "../fonts";
 import { useRef } from "react";
 import { redirect } from "next/navigation";
+import { STR_LINK1_ROUTE, STR_LINK1_TITLE, STR_LINK2_ROUTE, STR_LINK2_TITLE, STR_LINK3_ROUTE, STR_LINK3_TITLE } from "../_Utilities/constants";
 
 export function CheckWithinViewVertical(element: HTMLDivElement, parent: HTMLElement | null): boolean {
     if (element != null) {
@@ -27,12 +28,12 @@ export function CheckWithinViewVertical(element: HTMLDivElement, parent: HTMLEle
 
 export function PathFromString(location: string): string {
     switch (location) {
-        case "about":
-            return "/about"; 
-        case "gallery":
-            return "/gallery"; 
-        case "showcases":
-            return "/showcases"; 
+        case STR_LINK1_TITLE:
+            return STR_LINK1_ROUTE; 
+        case STR_LINK2_TITLE:
+            return STR_LINK2_ROUTE; 
+        case STR_LINK3_TITLE:
+            return STR_LINK3_ROUTE; 
         default:
             return "";
     }
@@ -45,11 +46,11 @@ export default function HomeScrollSelection() {
 
     function CheckActiveSelection(): string {
         if (about.current != null && CheckWithinViewVertical(about.current, about.current.parentElement))
-            return "about";
+            return STR_LINK1_TITLE;
         if (gallery.current != null && CheckWithinViewVertical(gallery.current, gallery.current.parentElement))
-            return "gallery";
+            return STR_LINK2_TITLE;
         if (showcases.current != null && CheckWithinViewVertical(showcases.current, showcases.current.parentElement))
-            return "showcases";
+            return STR_LINK3_TITLE;
         return "";
     }
 
@@ -88,7 +89,7 @@ export default function HomeScrollSelection() {
                                 id="about"
                             >
                                 <p>
-                                    About
+                                    {STR_LINK1_TITLE}
                                 </p>
                             </div>
                             <div
@@ -97,7 +98,7 @@ export default function HomeScrollSelection() {
                                 id="gallery"
                             >
                                 <p>
-                                    Gallery
+                                    {STR_LINK2_TITLE}
                                 </p>
                             </div>
                             <div
@@ -106,7 +107,7 @@ export default function HomeScrollSelection() {
                                 id="showcases"
                             >
                                 <p>
-                                    Showcases
+                                    {STR_LINK3_TITLE}
                                 </p>
                             </div>
                         </div>
