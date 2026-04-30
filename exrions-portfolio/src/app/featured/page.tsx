@@ -1,9 +1,11 @@
+import { STR_COLORPRIMARY_CODE } from ".././_Utilities/constants";
+import ClickSpark from "../../components/ClickSpark";
 import { fingerPaint } from "../fonts";
 
 export default function Featured() {
     return (
         <>
-            <div className={`h-full w-full -z-1`}>
+            <div className={`h-full w-full`}>
                 {/* Centered Title and Subtitle */}
                 <div className={`absolute flex flex-col flex-1 items-center justify-center h-full w-full gap-6 sm:gap-7 md:gap-8`}>
                     <h1 className={`${fingerPaint.className} text-primary text-4xl sm:text-5xl md:text-6xl`}>
@@ -15,8 +17,18 @@ export default function Featured() {
                 </div>
 
                 {/* Polaroid Images */}
-                <div>
-                    
+                <div className={`absolute flex flex-col flex-1 items-center justify-center w-full h-full`}>
+                    <ClickSpark
+                        sparkColor={STR_COLORPRIMARY_CODE}
+                        sparkSize={10}
+                        sparkRadius={15}
+                        sparkCount={8}
+                        duration={400}
+                    >
+                        <div className={``}>
+                            Hello
+                        </div>
+                    </ClickSpark>
                 </div>
             </div>
         </>
