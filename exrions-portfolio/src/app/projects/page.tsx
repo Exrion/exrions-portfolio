@@ -33,7 +33,7 @@ export default function Projects() {
                         href={`/projects/${ids[i]}`}
                         key={ids[i]}
                     >
-                        Link to {i}
+                        Link to {ids[i]}
                     </Link>
                 );
             }
@@ -43,15 +43,25 @@ export default function Projects() {
 
     return (
         <>
-            <h1 className={`text-primary ${fingerPaint.className} text-6xl  text-left w-full`}>My Projects</h1>
-            <h2 className={`text-secondary ${fingerPaint.className} text-xl text-left w-full`}>A collection of my proudest projects!</h2>
-            <div>
-                <MasonaryGrid
-                    frameWidth={`200`}
-                    gap={`10`}
-                >
-                    {renderPosts()}
-                </MasonaryGrid>
+            <div className={`
+                flex flex-col flex-1 items-start justify-start 
+                h-full w-4/5 
+                gap-4 sm:gap-5 md:gap-6
+                pl-6 sm:pl-7 md:pl-8
+                pr-6 sm:pr-7 md:pr-8
+                pt-12 sm:pt-14 md:pt-16
+                pb-16 sm:pb-20 md:pb-24`}
+            >
+                <h1 className={`text-primary ${fingerPaint.className} text-6xl  text-left w-full`}>My Projects</h1>
+                <h2 className={`text-secondary ${fingerPaint.className} text-xl text-left w-full`}>A collection of my proudest projects!</h2>
+                <div>
+                    <MasonaryGrid
+                        frameWidth={`200`}
+                        gap={`10`}
+                    >
+                        {renderPosts()}
+                    </MasonaryGrid>
+                </div>
             </div>
         </>
     );
