@@ -15,25 +15,18 @@ export async function getPostData(id: string): Promise<string> {
     const matterResult = matter(fileContents);
 
     // Use remark to convert markdown into HTML string
-    const processedContent = await remark()
-        .use(html)
-        .process(matterResult.content);
-    const contentHtml = processedContent.toString();
+    // const processedContent = await remark()
+    //     .use(html)
+    //     .process(matterResult.content);
+    // const contentHtml = processedContent.toString();
 
     // Combine the data with the id and contentHtml
-    return contentHtml;
+    return fileContents;
 }
 
-export async function getAllPostData(): Promise<string[]> {
+export async function getAllPostIds(): Promise<string[]> {
     const files = fs.readdirSync(STR_PROJECTS_DIRECTORY);
     const markdownFiles = files.filter((file) => file.endsWith('.md'));
-
-    const posts = await Promise.all(
-        markdownFiles.map(async (file) => {
-            const id = path.basename(file, '.md');
-            return getPostData(id);
-        })
-    );
-
-    return posts;
+    const ids = markdownFiles.map((file) => path.basename(file, '.md'));
+    return ids;
 }

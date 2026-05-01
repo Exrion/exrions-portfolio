@@ -29,7 +29,7 @@ export default function RootLayout({
           <Navbar />
           {children}
         </Root>
-        <div className={`text-red-600 absolute bottom-0 left-0 text-sm`}>
+        <div className={`text-red-600 bottom-0 left-0 text-sm sticky`}>
           <p>This site is WIP! Only core functionality is implemented.</p>
         </div>
       </body>

@@ -2,11 +2,13 @@
 
 import { fingerPaint } from '../fonts';
 import { BalancedMasonryGrid as MasonaryGrid } from '@masonry-grid/react';
-import { getAllPostData } from './_Server/PostManager';
+import { getAllPostIds } from './_Server/PostManager';
 import { useEffect, useState } from 'react';
+import Link from 'next/link'
+import ProjectPostMasonary from './_ProjectPosts/ProjectPostMasonary';
 
 export default function Projects() {
-    const [posts, setPosts] = useState<string[]>([]);
+    const [ids, setIds] = useState<string[]>([]);
 
     useEffect(() => {
         let active: boolean = true;
@@ -14,12 +16,30 @@ export default function Projects() {
         return () => { active = false; };
 
         async function fetchPosts() {
-            setPosts(undefined as any);
-            const data = await getAllPostData();
+            setIds(undefined as any);
+            const ids = await getAllPostIds();
             if (!active) return;
-            setPosts(data);
+            setIds(ids);
         };
     }, []);
+
+    function renderPosts(): React.ReactNode[] {
+        let renderedPosts: React.ReactNode[] = [];
+
+        if (ids) {
+            for (let i: number = 0; i < ids.length; i++) {
+                renderedPosts.push(
+                    <Link
+                        href={`/projects/${ids[i]}`}
+                        key={ids[i]}
+                    >
+                        Link to {i}
+                    </Link>
+                );
+            }
+        }
+        return renderedPosts;
+    }
 
     return (
         <>
@@ -30,7 +50,7 @@ export default function Projects() {
                     frameWidth={`200`}
                     gap={`10`}
                 >
-
+                    {renderPosts()}
                 </MasonaryGrid>
             </div>
         </>
