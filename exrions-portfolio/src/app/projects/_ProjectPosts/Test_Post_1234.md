@@ -1,13 +1,10 @@
 ---
-__Advertisement :)__
-
-- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
-  resize in browser.
-- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
-  i18n with plurals support and easy syntax.
-
-You will like those projects!
-
+date: 6/7/2026
+title: Test Post 1234
+description: Praesent pharetra fermentum magna ac sodales. Curabitur nisl arcu, auctor sit amet vehicula et, consequat quis eros. Integer mauris risus, lobortis eu augue nec, luctus aliquet odio.
+brief: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque tristique ornare.
+thumbnail_url: ...
+tags: ["1234", "test post"]
 ---
 
 # h1 Heading 8-)

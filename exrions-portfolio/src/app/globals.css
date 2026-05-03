@@ -12,8 +12,6 @@
   --secondary-standard: #404040;
   --primary: oklch(0.205 0 0);
   --secondary: oklch(0.97 0 0);
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -42,6 +40,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
 }
 
 @theme inline {
@@ -50,17 +50,6 @@
   --color-primary-plus: var(--primary-plus);
   --color-primary: var(--primary-standard);
   --color-secondary: var(--secondary-standard);
-
-  /* --animate-pullchain: pullchain 1s ease-in-out 1;
-  @keyframes pullchain {
-    0%,
-    100% {
-      transform: translateY(-25%);
-    }
-    50% {
-      transform: none;
-    }
-  } */
 
   --font-heading: var(--font-sans);
 

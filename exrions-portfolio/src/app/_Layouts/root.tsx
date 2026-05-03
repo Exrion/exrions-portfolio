@@ -1,3 +1,4 @@
+import { IconContext } from "react-icons";
 import { geistSans } from "../fonts";
 
 export default function Root({

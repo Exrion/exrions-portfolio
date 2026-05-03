@@ -21,7 +21,7 @@ export async function getPostData(id: string): Promise<string> {
     // const contentHtml = processedContent.toString();
 
     // Combine the data with the id and contentHtml
-    return fileContents;
+    return JSON.stringify(matterResult);
 }
 
 export async function getAllPostIds(): Promise<string[]> {
