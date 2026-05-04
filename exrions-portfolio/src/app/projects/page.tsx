@@ -1,14 +1,17 @@
 'use client'
 
 import { fingerPaint } from '../fonts';
-import { BalancedMasonryGrid as MasonaryGrid } from '@masonry-grid/react';
+import { Frame, BalancedMasonryGrid as MasonaryGrid } from '@masonry-grid/react';
 import { getAllPostIds } from './_Server/PostManager';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, JSX, lazy, Suspense } from 'react';
+import ScrollReveal from '../../components/ScrollReveal';
 import Link from 'next/link'
-import ProjectPostMasonary from './_ProjectPosts/ProjectPostMasonary';
+
+const ProjectPostMasonary = lazy(() => import('./_ProjectPosts/ProjectPostMasonary'));
 
 export default function Projects() {
     const [ids, setIds] = useState<string[]>([]);
+    const [posts, setPosts] = useState<JSX.Element[]>([]);
 
     useEffect(() => {
         let active: boolean = true;
@@ -23,23 +26,37 @@ export default function Projects() {
         };
     }, []);
 
-    function renderPosts(): React.ReactNode[] {
-        let renderedPosts: React.ReactNode[] = [];
-
+    useEffect(() => {
+        let renderedPosts: JSX.Element[] = [];
         if (ids) {
             for (let i: number = 0; i < ids.length; i++) {
                 renderedPosts.push(
-                    <Link
-                        href={`/projects/${ids[i]}`}
-                        key={ids[i]}
-                    >
-                        Link to {ids[i]}
-                    </Link>
+                    <Frame width={4} height={3} key={ids[i]}>
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <Link
+                                href={`/projects/${ids[i]}`}
+                                key={ids[i]}
+                            >
+                                <div
+                                    className={`w-full h-full flex flex-col flex-1 items-start justify-start 
+                                        border-2 hover:border-4 border-secondary hover:border-primary rounded-xs
+                                        ease-in-out transition-all duration-150 
+                                        bg-background
+                                        p-4
+                                    `}
+                                >
+                                    <ProjectPostMasonary
+                                        id={ids[i]}
+                                    />
+                                </div>
+                            </Link>
+                        </Suspense>
+                    </Frame>
                 );
             }
         }
-        return renderedPosts;
-    }
+        setPosts(renderedPosts);
+    }, [ids]);
 
     return (
         <>
@@ -54,12 +71,13 @@ export default function Projects() {
             >
                 <h1 className={`text-primary ${fingerPaint.className} text-6xl  text-left w-full`}>My Projects</h1>
                 <h2 className={`text-secondary ${fingerPaint.className} text-xl text-left w-full`}>A collection of my proudest projects!</h2>
-                <div>
+                <div className={`w-full h-full overflow-visible`}>
                     <MasonaryGrid
-                        frameWidth={`200`}
-                        gap={`10`}
+                        frameWidth={`20rem`}
+                        gap={`1.5rem`}
+                        className={`w-full h-full overflow-visible`}
                     >
-                        {renderPosts()}
+                        {posts}
                     </MasonaryGrid>
                 </div>
             </div>

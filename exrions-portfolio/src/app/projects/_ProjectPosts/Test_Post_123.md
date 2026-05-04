@@ -3,7 +3,7 @@ date: 3/5/2026
 title: Test Post 123
 description: Praesent pharetra fermentum magna ac sodales. Curabitur nisl arcu, auctor sit amet vehicula et, consequat quis eros. Integer mauris risus, lobortis eu augue nec, luctus aliquet odio.
 brief: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque tristique ornare.
-thumbnail_url: ...
+thumbnail_url: https://i.ytimg.com/vi/sxrzdev5l3A/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAnoLhciieU9-WOxHTjC6gzN8nBKw
 tags: ["123", "test post"]
 ---
 

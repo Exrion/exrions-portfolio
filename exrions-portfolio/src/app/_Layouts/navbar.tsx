@@ -12,7 +12,7 @@ export default function Navbar() {
 
     return (
         <div className={`absolute flex flex-col flex-1 items-center justify-start w-full transition-all duration-500 ease-in-out ${navState ? "top-0" : "-top-60"} z-100`}>
-            <div className={`flex flex-col flex-1 items-center justify-start w-full`}>
+            <div className={`fixed flex flex-col flex-1 items-center justify-start w-full`}>
                 {/* Nav Menu */}
                 <div
                     className={`flex flex-col items-center justify-start w-full`}

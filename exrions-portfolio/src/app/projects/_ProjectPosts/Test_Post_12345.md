@@ -3,7 +3,7 @@ date: 19/04/2025
 title: Welcome to Markdown Viewer
 description: A GitHub-style Markdown renderer with live preview, math, diagrams, and export support.
 brief: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque tristique ornare.
-thumbnail_url: ...
+thumbnail_url: https://miro.medium.com/1*GI-td9gs8D5OKZd19mAOqA.png
 tags: ["markdown", "preview", "mermaid", "latex", "open-source"]
 ---
 

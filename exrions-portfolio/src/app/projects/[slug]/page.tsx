@@ -1,16 +1,16 @@
 'use client'
 
-import { use, useState, useEffect, Suspense, useRef, JSX, useCallback } from "react";
+import { use, useState, useEffect, Suspense, useRef, JSX } from "react";
 import { getPostData } from "../_Server/PostManager";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { fingerPaint, geistSans, gloriaHallelujah } from "@/app/fonts";
+import { fingerPaint, geistSans } from "@/app/fonts";
 import Link from "next/link";
 import CenterUnderline from "@/components/fancy/text/underline-center";
 import matter from "gray-matter";
 import { LuArrowUpToLine } from "react-icons/lu";
-import VariableFontHoverByRandomLetter from "@/components/fancy/text/variable-font-hover-by-random-letter";
 import { MdKeyboardArrowRight, MdKeyboardDoubleArrowRight } from "react-icons/md";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Page({
     params,
@@ -161,7 +161,7 @@ export default function Page({
                         <div
                             className={`
                                 fixed
-                                flex-col flex-1 items-start justify-start gap-12
+                                flex-col flex-1 items-start justify-start space-y-2
                             `}
                         >
                             <div className={`text-primary text-3xl ${fingerPaint.className}`}>

@@ -3,7 +3,7 @@ date: 6/7/2026
 title: Test Post 1234
 description: Praesent pharetra fermentum magna ac sodales. Curabitur nisl arcu, auctor sit amet vehicula et, consequat quis eros. Integer mauris risus, lobortis eu augue nec, luctus aliquet odio.
 brief: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque tristique ornare.
-thumbnail_url: ...
+thumbnail_url: https://static01.nyt.com/images/2020/01/28/multimedia/28xp-memekid3/28cp-memekid3-articleLarge.jpg?quality=75&auto=webp&disable=upscale
 tags: ["1234", "test post"]
 ---
 
