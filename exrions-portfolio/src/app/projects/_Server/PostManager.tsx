@@ -7,7 +7,7 @@ import * as fs from "fs";
 
 export async function getPostData(id: string): Promise<string> {
     try {
-        const fullPath = path.join(STR_PROJECTS_DIRECTORY, `${id}.md`.replaceAll("%20", " "));
+        const fullPath = path.join(process.cwd(), STR_PROJECTS_DIRECTORY, `${id}.md`.replaceAll("%20", " "));
         const fileContents = fs.readFileSync(fullPath, 'utf8');
 
         // Use gray-matter to parse the post metadata section
