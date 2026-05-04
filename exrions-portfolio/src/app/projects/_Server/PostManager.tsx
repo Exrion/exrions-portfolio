@@ -1,14 +1,12 @@
 'use server'
 
-import { remark } from 'remark';
-import html from 'remark-html';
 import path from "path";
 import matter from "gray-matter";
 import { STR_PROJECTS_DIRECTORY } from '../../_Utilities/constants';
 import * as fs from "fs";
 
 export async function getPostData(id: string): Promise<string> {
-    const fullPath = path.join(STR_PROJECTS_DIRECTORY, `${id}.md`);
+    const fullPath = path.join(STR_PROJECTS_DIRECTORY, `${id}.md`.replaceAll("%20", " "));
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     // Use gray-matter to parse the post metadata section

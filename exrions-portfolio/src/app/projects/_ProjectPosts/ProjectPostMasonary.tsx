@@ -27,7 +27,6 @@ export default function ProjectPostMasonary(
             if (!active) return;
             const matterResult: matter.GrayMatterFile<string> = JSON.parse(content);
             setMetadata(matterResult.data);
-            console.log(matterResult.data);
         };
     }, []);
 

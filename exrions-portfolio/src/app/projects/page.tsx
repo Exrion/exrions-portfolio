@@ -4,7 +4,6 @@ import { fingerPaint } from '../fonts';
 import { Frame, BalancedMasonryGrid as MasonaryGrid } from '@masonry-grid/react';
 import { getAllPostIds } from './_Server/PostManager';
 import { useEffect, useState, JSX, lazy, Suspense } from 'react';
-import ScrollReveal from '../../components/ScrollReveal';
 import Link from 'next/link'
 
 const ProjectPostMasonary = lazy(() => import('./_ProjectPosts/ProjectPostMasonary'));

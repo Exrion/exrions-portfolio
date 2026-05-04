@@ -10,7 +10,6 @@ import CenterUnderline from "@/components/fancy/text/underline-center";
 import matter from "gray-matter";
 import { LuArrowUpToLine } from "react-icons/lu";
 import { MdKeyboardArrowRight, MdKeyboardDoubleArrowRight } from "react-icons/md";
-import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Page({
     params,
@@ -41,7 +40,6 @@ export default function Page({
     useEffect(() => {
         if (!md || !refMarkdown.current) return;
         const elements = refMarkdown.current.querySelectorAll("h1, h2, h3");
-        console.log(elements);
         let outlineElements: JSX.Element[] = [];
         let count: number = 0;
         elements.forEach((ele) => {
