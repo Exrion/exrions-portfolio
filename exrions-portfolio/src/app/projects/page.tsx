@@ -30,7 +30,7 @@ export default function Projects() {
         if (ids) {
             for (let i: number = 0; i < ids.length; i++) {
                 renderedPosts.push(
-                    <Frame width={4} height={3} key={ids[i]}>
+                    <Frame width={4} height={4} key={ids[i]}>
                         <Suspense fallback={<div>Loading...</div>}>
                             <Link
                                 href={`/projects/${ids[i]}`}

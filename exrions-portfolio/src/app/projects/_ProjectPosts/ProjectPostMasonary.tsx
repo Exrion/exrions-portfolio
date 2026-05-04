@@ -47,7 +47,7 @@ export default function ProjectPostMasonary(
 
     return (
         <>
-            <img src={metadata?.thumbnailSrc} alt={metadata?.title} loading="lazy" />
+            <img src={metadata?.thumbnail_url} alt={metadata?.title} loading="lazy" />
             <h3 className={`text-2xl text-primary-plus ${geistSans.className}`}>{metadata?.title}</h3>
             <p className={`text-lg text-primary ${geistSans.className}`}>{metadata?.brief}</p>
             <p className={`text-sm text-secondary ${geistSans.className}`}>{metadata?.date}</p>
