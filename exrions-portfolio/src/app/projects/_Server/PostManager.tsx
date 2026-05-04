@@ -6,20 +6,26 @@ import { STR_PROJECTS_DIRECTORY } from '../../_Utilities/constants';
 import * as fs from "fs";
 
 export async function getPostData(id: string): Promise<string> {
-    const fullPath = path.join(STR_PROJECTS_DIRECTORY, `${id}.md`.replaceAll("%20", " "));
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    try {
+        const fullPath = path.join(STR_PROJECTS_DIRECTORY, `${id}.md`.replaceAll("%20", " "));
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-    // Use gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
+        // Use gray-matter to parse the post metadata section
+        const matterResult = matter(fileContents);
 
-    // Use remark to convert markdown into HTML string
-    // const processedContent = await remark()
-    //     .use(html)
-    //     .process(matterResult.content);
-    // const contentHtml = processedContent.toString();
+        // Use remark to convert markdown into HTML string
+        // const processedContent = await remark()
+        //     .use(html)
+        //     .process(matterResult.content);
+        // const contentHtml = processedContent.toString();
 
-    // Combine the data with the id and contentHtml
-    return JSON.stringify(matterResult);
+        // Combine the data with the id and contentHtml
+        return JSON.stringify(matterResult);
+    }
+    catch (e: any) {
+        console.log(e);
+        return JSON.stringify({ error: e.message });
+    }
 }
 
 export async function getAllPostIds(): Promise<string[]> {
