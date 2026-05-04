@@ -1,7 +1,7 @@
 'use client'
 
 import { fingerPaint } from '../fonts';
-import { Frame, BalancedMasonryGrid as MasonaryGrid } from '@masonry-grid/react';
+import Masonry from '@mui/lab/Masonry';
 import { getAllPostIds } from './_Server/PostManager';
 import { useEffect, useState, JSX, lazy, Suspense } from 'react';
 import Link from 'next/link'
@@ -30,27 +30,18 @@ export default function Projects() {
         if (ids) {
             for (let i: number = 0; i < ids.length; i++) {
                 renderedPosts.push(
-                    <Frame width={4} height={4} key={ids[i]}>
+                    <div key={ids[i]}>
                         <Suspense fallback={<div>Loading...</div>}>
                             <Link
                                 href={`/projects/${ids[i]}`}
                                 key={ids[i]}
                             >
-                                <div
-                                    className={`w-full h-full flex flex-col flex-1 items-start justify-start 
-                                        border-2 hover:border-4 border-secondary hover:border-primary rounded-xs
-                                        ease-in-out transition-all duration-150 
-                                        bg-background
-                                        p-4
-                                    `}
-                                >
-                                    <ProjectPostMasonary
-                                        id={ids[i]}
-                                    />
-                                </div>
+                                <ProjectPostMasonary
+                                    id={ids[i]}
+                                />
                             </Link>
                         </Suspense>
-                    </Frame>
+                    </div>
                 );
             }
         }
@@ -71,13 +62,9 @@ export default function Projects() {
                 <h1 className={`text-primary ${fingerPaint.className} text-6xl  text-left w-full`}>My Projects</h1>
                 <h2 className={`text-secondary ${fingerPaint.className} text-xl text-left w-full`}>A collection of my proudest projects!</h2>
                 <div className={`w-full h-full overflow-visible`}>
-                    <MasonaryGrid
-                        frameWidth={`20rem`}
-                        gap={`1.5rem`}
-                        className={`w-full h-full overflow-visible`}
-                    >
+                    <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={{ xs: 1, sm: 2, md: 4 }}>
                         {posts}
-                    </MasonaryGrid>
+                    </Masonry>
                 </div>
             </div>
         </>
