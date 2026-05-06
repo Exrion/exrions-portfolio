@@ -62,7 +62,7 @@ export default function Projects() {
                 <h1 className={`text-primary ${fingerPaint.className} text-6xl  text-left w-full`}>My Projects</h1>
                 <h2 className={`text-secondary ${fingerPaint.className} text-xl text-left w-full`}>A collection of my proudest projects!</h2>
                 <div className={`w-full h-full overflow-visible`}>
-                    <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={{ xs: 1, sm: 2, md: 4 }}>
+                    <Masonry columns={{ xs: 1, sm: 2, lg: 3 }} spacing={{ xs: 2, md: 3, xl: 4 }}>
                         {posts}
                     </Masonry>
                 </div>

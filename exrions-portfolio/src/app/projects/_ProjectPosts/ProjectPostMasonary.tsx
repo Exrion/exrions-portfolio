@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { JSX, useEffect, useRef, useState } from "react";
 import { getPostData } from "../_Server/PostManager";
 import { fingerPaint, geistSans, gloriaHallelujah } from "@/app/fonts";
+import { STR_PROJECTPOSTS_ID } from "@/app/_Utilities/constants";
 
 export type ProjectPostMasonaryProps = {
     id: string;
@@ -13,9 +14,9 @@ export default function ProjectPostMasonary(
     props: ProjectPostMasonaryProps
 ) {
     const { id } = props;
-    const [tagElements, setTagElements] = useState<JSX.Element[]>([])
+    const [tagElements, setTagElements] = useState<JSX.Element[]>([]);
+    const [tagStrings, setTagStrings] = useState<string[]>([]);
     const [metadata, setMetadata] = useState<{ [key: string]: any; }>({});
-    const postParent = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         let active: boolean = true;
@@ -34,8 +35,10 @@ export default function ProjectPostMasonary(
     useEffect(() => {
         if (!metadata) return;
         const tagElementsList: JSX.Element[] = [];
+        const tagStringsList: string[] = [];
         let count: number = 0;
         metadata.tags?.map((tag: string, index: number) => {
+            tagStringsList.push(tag);
             tagElementsList.push(
                 <span key={index}>
                     {count > 0 ? ', ' : ''}{tag}
@@ -44,59 +47,40 @@ export default function ProjectPostMasonary(
             count++;
         });
         setTagElements(tagElementsList);
+        setTagStrings(tagStringsList);
     }, [metadata]);
 
     return (
         <>
             <div
-                className={`w-full h-full flex flex-col flex-1 items-start justify-start 
-                    border-2 border-secondary rounded-xs
+                className={`w-full h-full flex flex-col flex-1 items-center justify-start 
+                    border-3 border-secondary hover:border-primary rounded-xs
+                    hover:scale-102
                     ease-in-out transition-all duration-150 
-                    bg-black/65
                 `}
-                ref={postParent}
+                data-tags={tagStrings}
+                id={STR_PROJECTPOSTS_ID}
             >
-                {/* Data */}
+                <img
+                    src={metadata?.thumbnail_url}
+                    alt={metadata?.title}
+                    loading="lazy"
+                    className={`w-full drop-shadow-md`}
+                />
                 <div
                     className={`
-                        h-full w-full flex flex-col flex-1 items-start justify-start
-                        opacity-0 hover:opacity-100 z-1
+                        flex-col flex-1 items-start justify-start gap-6
+                        pl-2 pr-2 pt-2 pb-4
                     `}
                 >
-                    <div className={`
-                            flex-col items-start justify-start absolute bg-amber-400 
-                            w-[${postParent.current?.getBoundingClientRect().width}px]
-                            h-[${postParent.current?.getBoundingClientRect().height}px]
-                        `}
-                    >
-                        <h3 className={`text-2xl text-primary-plus ${geistSans.className} text-wrap`}>{metadata?.title}</h3>
-                        <p className={`text-lg text-primary ${geistSans.className} text-wrap`}>{metadata?.brief}</p>
-                        <p className={`text-sm text-secondary ${geistSans.className}`}>{metadata?.date}</p>
-                        <div className={`text-xs text-secondary opacity-70 ${geistSans.className}`}>
-                            {tagElements}
-                        </div>
+                    <div className={`flex flex-col md:flex-row items-start md:items-start justify-start md:justify-between`}>
+                        <h3 className={`text-2xl md:text-3xl text-primary-plus ${geistSans.className} text-wrap`}>{metadata?.title}</h3>
+                        <p className={`text-md md:text-xl text-secondary ${geistSans.className}`}>{metadata?.date}</p>
                     </div>
+                    <p className={`text-lg md:text-xl text-primary ${geistSans.className} text-wrap`}>{metadata?.brief}</p>
+                    {/* <div className={`text-xs text-secondary opacity-70 ${geistSans.className}`}>{tagElements}</div> */}
                 </div>
-
-                {/* Image */}
-                <div
-                    className={`
-                        w-full h-full flex flex-col flex-1 items-start justify-start 
-                    `}
-                >
-                    <div
-                        className={`
-                            w-full h-full flex flex-col flex-1 items-start justify-start
-                        `}
-                    >
-                        <img
-                            src={metadata?.thumbnail_url}
-                            alt={metadata?.title}
-                            loading="lazy"
-                            className={`mask-b-from-70% mask-b-to-100%`} />
-                    </div>
-                </div>
-            </div>
+            </div >
         </>
     );
 }

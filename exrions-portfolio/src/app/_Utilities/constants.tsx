@@ -1,6 +1,9 @@
 // General
 export const STR_NAME: string = "Lim Cai Xuan";
 
+// JS Constants
+export const STR_PROJECTPOSTS_ID: string = "projectPosts";
+
 // FS
 export const STR_PROJECTS_DIRECTORY: string = "src/app/projects/_ProjectPosts";
 
