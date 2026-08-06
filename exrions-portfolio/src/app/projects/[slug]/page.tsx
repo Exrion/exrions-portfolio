@@ -49,7 +49,7 @@ export default function Page({
                     outlineElements.push(
                         <li key={count}>
                             <button
-                                className={`flex flex-row gap-2 items-start justify-start text-wrap text-left min-h-6 hover:text-primary-plus`}
+                                className={`flex flex-row gap-2 items-start justify-start text-wrap text-left min-h-6 hover:text-primary-plus hover:cursor-pointer`}
                                 onClick={() => window.scrollTo({ top: ele.getBoundingClientRect().top + window.scrollY, behavior: 'smooth' })}
                             >
                                 <div className={`flex flex-col flex-1 items-center justify-center h-full`}>
@@ -63,7 +63,7 @@ export default function Page({
                     outlineElements.push(
                         <li key={count}>
                             <button
-                                className={`pl-4 flex flex-row gap-2 items-start justify-start text-wrap text-left min-h-6 hover:text-primary-plus`}
+                                className={`pl-4 flex flex-row gap-2 items-start justify-start text-wrap text-left min-h-6 hover:text-primary-plus hover:cursor-pointer`}
                                 onClick={() => window.scrollTo({ top: ele.getBoundingClientRect().top + window.scrollY, behavior: 'smooth' })}
                             >
                                 <div className={`flex flex-col flex-1 items-center justify-center h-full`}>
@@ -79,7 +79,7 @@ export default function Page({
                     outlineElements.push(
                         <li key={count}>
                             <button
-                                className={`pl-16 flex flex-row gap-2 items-start justify-start text-wrap text-left min-h-6 hover:text-primary-plus`}
+                                className={`pl-16 flex flex-row gap-2 items-start justify-start text-wrap text-left min-h-6 hover:text-primary-plus hover:cursor-pointer`}
                                 onClick={() => window.scrollTo({ top: ele.getBoundingClientRect().top + window.scrollY, behavior: 'smooth' })}
                             >
                                 <span>
@@ -111,7 +111,7 @@ export default function Page({
     return (
         <div className={`
                 flex flex-row items-start justify-center
-                w-full lg:w-250 h-full 
+                w-full lg:w-350 h-full 
                 pl-4 sm:pl-5 md:pl-6
                 pr-4 sm:pr-5 md:pr-6
                 pt-8 sm:pt-10 md:pt-12
@@ -174,6 +174,7 @@ export default function Page({
                                 <CenterUnderline underlinePaddingRatio={0.1} className={`text-secondary text-sm ${geistSans.className}`}>
                                     <button
                                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                                        className={`hover:cursor-pointer`}
                                     >
                                         Back to top
                                     </button>

@@ -5,6 +5,7 @@ import { JSX, useEffect, useRef, useState } from "react";
 import { getPostData } from "../_Server/PostManager";
 import { fingerPaint, geistSans, gloriaHallelujah } from "@/app/fonts";
 import { STR_PROJECTPOSTS_ID } from "@/app/_Utilities/constants";
+import Image from "next/image";
 
 export type ProjectPostMasonaryProps = {
     id: string;
@@ -54,7 +55,7 @@ export default function ProjectPostMasonary(
         <>
             <div
                 className={`w-full h-full flex flex-col flex-1 items-center justify-start 
-                    border-3 border-secondary hover:border-primary rounded-xs
+                    border-3 border-secondary rounded-xs
                     hover:scale-102
                     ease-in-out transition-all duration-150 
                 `}
@@ -65,11 +66,12 @@ export default function ProjectPostMasonary(
                     src={metadata?.thumbnail_url}
                     alt={metadata?.title}
                     loading="lazy"
-                    className={`w-full drop-shadow-md`}
+                    className={`w-full drop-shadow-xs`}
                 />
                 <div
                     className={`
                         flex-col flex-1 items-start justify-start gap-6
+                        w-full
                         pl-2 pr-2 pt-2 pb-4
                     `}
                 >
