@@ -76,10 +76,10 @@ export default function ProjectPostMasonary(
                     `}
                 >
                     <div className={`flex flex-col md:flex-row items-start md:items-start justify-start md:justify-between`}>
-                        <h3 className={`text-2xl md:text-3xl text-primary-plus ${geistSans.className} text-wrap`}>{metadata?.title}</h3>
-                        <p className={`text-md md:text-xl text-secondary ${geistSans.className}`}>{metadata?.date}</p>
+                        <h3 className={`${fingerPaint.className} text-2xl md:text-3xl text-primary-plus ${geistSans.className} text-wrap`}>{metadata?.title}</h3>
+                        <p className={`${gloriaHallelujah.className} text-md md:text-xl text-secondary ${geistSans.className}`}>{metadata?.date}</p>
                     </div>
-                    <p className={`text-lg md:text-xl text-primary ${geistSans.className} text-wrap`}>{metadata?.brief}</p>
+                    <p className={`${fingerPaint.className} text-lg md:text-xl text-primary ${geistSans.className} text-wrap`}>{metadata?.brief}</p>
                     {/* <div className={`text-xs text-secondary opacity-70 ${geistSans.className}`}>{tagElements}</div> */}
                 </div>
             </div >

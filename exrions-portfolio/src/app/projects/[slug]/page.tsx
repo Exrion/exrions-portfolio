@@ -49,7 +49,7 @@ export default function Page({
                     outlineElements.push(
                         <li key={count}>
                             <button
-                                className={`flex flex-row gap-2 items-start justify-start text-wrap text-left min-h-6 hover:text-primary-plus hover:cursor-pointer`}
+                                className={`text-lg flex flex-row gap-2 items-start justify-start text-wrap text-left min-h-6 hover:text-primary-plus hover:cursor-pointer`}
                                 onClick={() => window.scrollTo({ top: ele.getBoundingClientRect().top + window.scrollY, behavior: 'smooth' })}
                             >
                                 <div className={`flex flex-col flex-1 items-center justify-center h-full`}>
@@ -63,7 +63,7 @@ export default function Page({
                     outlineElements.push(
                         <li key={count}>
                             <button
-                                className={`pl-4 flex flex-row gap-2 items-start justify-start text-wrap text-left min-h-6 hover:text-primary-plus hover:cursor-pointer`}
+                                className={`text-lg pl-4 flex flex-row gap-2 items-start justify-start text-wrap text-left min-h-6 hover:text-primary-plus hover:cursor-pointer`}
                                 onClick={() => window.scrollTo({ top: ele.getBoundingClientRect().top + window.scrollY, behavior: 'smooth' })}
                             >
                                 <div className={`flex flex-col flex-1 items-center justify-center h-full`}>
@@ -79,7 +79,7 @@ export default function Page({
                     outlineElements.push(
                         <li key={count}>
                             <button
-                                className={`pl-16 flex flex-row gap-2 items-start justify-start text-wrap text-left min-h-6 hover:text-primary-plus hover:cursor-pointer`}
+                                className={`text-lg pl-16 flex flex-row gap-2 items-start justify-start text-wrap text-left min-h-6 hover:text-primary-plus hover:cursor-pointer`}
                                 onClick={() => window.scrollTo({ top: ele.getBoundingClientRect().top + window.scrollY, behavior: 'smooth' })}
                             >
                                 <span>
@@ -139,6 +139,7 @@ export default function Page({
                             className={`
                             prose prose-sm md:prose 
                             prose-headings:font-(family-name:--font-gloria-hallelujah) prose-h1:text-primary-plus prose-h2:text-primary prose-h3:text-secondary
+                            prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-p:text-xl
                             w-full h-full`}
                             ref={refMarkdown}
                         >
@@ -171,7 +172,7 @@ export default function Page({
                                 </ul>
                             </div>
                             <div>
-                                <CenterUnderline underlinePaddingRatio={0.1} className={`text-secondary text-sm ${geistSans.className}`}>
+                                <CenterUnderline underlinePaddingRatio={0.1} className={`text-lg text-secondary ${geistSans.className}`}>
                                     <button
                                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                                         className={`hover:cursor-pointer`}
