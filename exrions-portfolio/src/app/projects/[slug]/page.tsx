@@ -3,6 +3,8 @@
 import { use, useState, useEffect, Suspense, useRef, JSX } from "react";
 import { getPostData } from "../_Server/PostManager";
 import Markdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import remarkRehype from 'remark-rehype'
 import remarkGfm from "remark-gfm";
 import { fingerPaint, geistSans } from "@/app/fonts";
 import Link from "next/link";
@@ -144,7 +146,7 @@ export default function Page({
                             ref={refMarkdown}
                         >
                             <hr />
-                            <Markdown remarkPlugins={[remarkGfm]}>
+                            <Markdown remarkPlugins={[remarkGfm, [remarkRehype, {allowDangerousHtml: true}], rehypeRaw]} >
                                 {md}
                             </Markdown>
                         </article>

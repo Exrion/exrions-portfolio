@@ -67,7 +67,7 @@ This journey has made me fall in love with composition and the beauty behind it.
 
 I hope to continue composing during my free time. 
 
-I'd like to give my thanks to [Professor Vuk](https://www.linkedin.com/in/vuk-krakovic-33aa227b/) for making time to help me out with composition and sound design despite my lack of a foundation in music! 
+I'd like to give my thanks to [Professor Vuk](https://www.linkedin.com/in/vuk-krakovic-33aa227b/) for making time to help me out with composition and sound design despite his busy schedule and my lack of any foundation in music! 
 # Final Outcome
 ## Video
 While I am not satisfied with my final product's sound design, I hope to get better with it as I go!
