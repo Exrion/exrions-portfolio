@@ -54,7 +54,7 @@ And so after a gruelling full trimester of development, the game was finished, o
 ![Editor](/posts/JustBeatIt_Editor.png)
 ## The Team
 ![Game Poster](/posts/JustBeatIt_Poster.jpg)
-I would like to thank my amazing team for making this game possible! My two artists Li Ting and [Shi Qi](https://twilichuchu.carrd.co/). As well as my awesome music composer and beatmap goddess Jyanne! Do check them out!
+I would like to thank my amazing team for making this game possible! My two cracking artists Li Ting and [Shi Qi](https://twilichuchu.carrd.co/). As well as my awesome music composer and beatmap goddess Jyanne! Do check them out!
 # Thoughts and Reflection
 This project helped me grow so much in my programming skills, as well as teamwork and communication skills. I could say it was both a blessing and a curse. But I have improved so much since we first undertook this project!
 
