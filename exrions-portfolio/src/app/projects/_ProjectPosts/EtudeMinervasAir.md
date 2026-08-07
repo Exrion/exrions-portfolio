@@ -73,7 +73,8 @@ I'd like to give my thanks to [Professor Vuk](https://www.linkedin.com/in/vuk-kr
 While I am not satisfied with my final product's sound design, I hope to get better with it as I go!
 [![Etude - Minerva's Air](/posts/EtudeMinervasAir_VideoCover.png)](https://www.youtube.com/watch?v=nlUWDyFpd-g)
 ## Score
-![Score Page 01](/posts/EtudeMinervasAir_Score01.png)
+<iframe id="score-iframe" width="100%" height="394" src="https://musescore.com/user/103996519/scores/35860940/s/OL_Ru7/embed" frameborder="0" allowfullscreen allow="autoplay; fullscreen"></iframe><span><a href="https://musescore.com/user/103996519/scores/35860940/s/InMv6z" target="_blank">Minerva&#39;s Air</a> by <a href="https://musescore.com/user/103996519">exrionlexom</a></span>
+<!-- ![Score Page 01](/posts/EtudeMinervasAir_Score01.png)
 ![Score Page 02](/posts/EtudeMinervasAir_Score02.png)
 ![Score Page 03](/posts/EtudeMinervasAir_Score03.png)
 ![Score Page 04](/posts/EtudeMinervasAir_Score04.png)
@@ -84,4 +85,4 @@ While I am not satisfied with my final product's sound design, I hope to get bet
 ![Score Page 09](/posts/EtudeMinervasAir_Score09.png)
 ![Score Page 10](/posts/EtudeMinervasAir_Score10.png)
 ![Score Page 11](/posts/EtudeMinervasAir_Score11.png)
-![Score Page 12](/posts/EtudeMinervasAir_Score12.png)
+![Score Page 12](/posts/EtudeMinervasAir_Score12.png) -->
