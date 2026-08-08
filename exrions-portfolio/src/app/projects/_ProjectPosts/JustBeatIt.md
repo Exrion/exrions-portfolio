@@ -9,7 +9,7 @@ brief: My first DigiPen game project and first ever rhythm game project.
 
 thumbnail_url: "/posts/JustBeatIt_Cover.png"
 
-tags: ["game", "music", "unity"]
+tags: ["game", "music", "unity", "coding"]
 ---
 ![Cover Image](/posts/JustBeatIt_Cover.png)
 Just Beat It! - My first DigiPen game project and first ever rhythm game project.
