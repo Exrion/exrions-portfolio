@@ -62,4 +62,4 @@ Small issues such as understanding Figma prototyping functions and their incompa
 This was a fun project that spanned the entirety of the trimester. Helped me learn a bit of Figma Motion (which had released just a month prior to the final submission), and gave me the oppurtunity to fully utilise components in a larger project. 
 # Final Outcome
 While the product page is a little buggy due to my hacky workaround of the lack of a scroll-trigger feature, it achieved the effect I wanted it to! 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/WjFstMck4CMSdW02FGXTmE/UXG1560-Assignment?node-id=849-10372&p=f&scaling=scale-down&content-scaling=fixed&page-id=1%3A2&starting-point-node-id=1087%3A7052&embed-host=share" allowfullscreen></iframe>
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/proto/WjFstMck4CMSdW02FGXTmE/UXG1560-Assignment?node-id=849-10372&p=f&scaling=scale-down&content-scaling=fixed&page-id=1%3A2&starting-point-node-id=1087%3A7052&embed-host=share" allowfullscreen></iframe>
