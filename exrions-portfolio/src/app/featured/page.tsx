@@ -1,8 +1,20 @@
-import { STR_COLORPRIMARY_CODE } from ".././_Utilities/constants";
-import ClickSpark from "../../components/ClickSpark";
-import { fingerPaint } from "../fonts";
+'use client'
 
-export default function Featured() {
+import { fingerPaint } from "../fonts";
+import DragElements from "@/components/fancy/blocks/drag-elements";
+import ProjectPostcard from "./_ProjectPostcards/ProjectPostcard";
+
+const randomInt = (min: number, max: number) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+export default function Featured() 
+{
+    const featuredMdFiles: string[] = [
+        "EtudeMinervasAir",
+        "BrahmWorkshop1"
+    ]
+
     return (
         <>
             <div className={`h-full w-full`}>
@@ -17,18 +29,20 @@ export default function Featured() {
                 </div>
 
                 {/* Polaroid Images */}
-                <div className={`absolute flex flex-col flex-1 items-center justify-center w-full h-full`}>
-                    <ClickSpark
-                        sparkColor={STR_COLORPRIMARY_CODE}
-                        sparkSize={10}
-                        sparkRadius={15}
-                        sparkCount={8}
-                        duration={400}
-                    >
-                        <div className={``}>
-                            Hello
-                        </div>
-                    </ClickSpark>
+                <div className={`absolute flex flex-col flex-1 items-center justify-center w-full h-full pointer-events-auto`}>
+                    <DragElements dragMomentum={false}>
+                        {
+                            featuredMdFiles.map((mdFileName: string, _: number) => {
+                                const rotation = randomInt(-12, 12)
+                                return (
+                                    <ProjectPostcard 
+                                        id={mdFileName}
+                                        key={mdFileName}
+                                    />
+                                );
+                            })
+                        }
+                    </DragElements>
                 </div>
             </div>
         </>

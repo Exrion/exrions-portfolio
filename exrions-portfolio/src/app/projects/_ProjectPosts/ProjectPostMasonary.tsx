@@ -1,11 +1,10 @@
 'use client'
 
 import matter from "gray-matter";
-import { JSX, useEffect, useRef, useState } from "react";
+import { JSX, useEffect, useState } from "react";
 import { getPostData } from "../_Server/PostManager";
 import { fingerPaint, geistSans, gloriaHallelujah } from "@/app/fonts";
 import { STR_PROJECTPOSTS_ID } from "@/app/_Utilities/constants";
-import Image from "next/image";
 
 export type ProjectPostMasonaryProps = {
     id: string;
