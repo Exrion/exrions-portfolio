@@ -32,14 +32,17 @@ export default function ProjectPostcard(
     if (metadata !== undefined) {
         return (
             <>
-                <div className={`shadow-lg bg-card flex flex-col flex-1 items-center justify-center p-4 text-primary ${fingerPaint.className} max-w-100 space-y-4`}>
+                <div className={`
+                    shadow-lg bg-card flex flex-col flex-1 items-center justify-center p-4 text-primary ${fingerPaint.className} 
+                    max-w-3xs sm:max-w-sm md:max-w-md xl:max-w-xl
+                    space-y-2 sm:space=y=3 md:space-y-4`}>
                     <img
-                    src={metadata?.thumbnail_url}
-                    alt={metadata?.title}
-                    loading="lazy"
-                    className={`w-full drop-shadow-xs pointer-events-none`}
-                />
-                    <p className={`text-xl`}>{metadata.title}</p>
+                        src={metadata?.thumbnail_url}
+                        alt={metadata?.title}
+                        loading="lazy"
+                        className={`w-full drop-shadow-xs pointer-events-none`}
+                    />
+                    <p className={`text-xl text-center`}>{metadata.title}</p>
                 </div>
             </>
         );
