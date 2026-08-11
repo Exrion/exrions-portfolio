@@ -26,19 +26,24 @@ export default function Featured()
                     <h2 className={`${fingerPaint.className} text-secondary text-md sm:text-lg md:text-xl w-1/2 sm:w-1/3 text-center`}>
                         A collection of my work, some personal, and some from academic projects.
                     </h2>
+                    <p className={`${fingerPaint.className} text-secondary text-sm sm:text-md md:text-lg w-1/2 sm:w-1/3 text-center`}>
+                        Drag the polaroid images around to view the projects! Click them to visit the blog posts.
+                    </p>
                 </div>
 
                 {/* Polaroid Images */}
-                <div className={`absolute flex flex-col flex-1 items-center justify-center w-full h-full pointer-events-auto`}>
-                    <DragElements dragMomentum={false}>
+                <div className={`absolute flex flex-col flex-1 items-center justify-center w-full h-full`}>
+                    <DragElements dragMomentum={false} className={``}>
                         {
                             featuredMdFiles.map((mdFileName: string, _: number) => {
-                                const rotation = randomInt(-12, 12)
+                                const rotation = randomInt(-6, 6);
                                 return (
+                                    <div style={{transform: `rotate(${rotation}deg)`}} suppressHydrationWarning>
                                     <ProjectPostcard 
                                         id={mdFileName}
                                         key={mdFileName}
                                     />
+                                    </div>
                                 );
                             })
                         }
