@@ -1,8 +1,10 @@
 'use client'
 
-import { fingerPaint } from "@/app/fonts";
+import { fingerPaint, gloriaHallelujah } from "@/app/fonts";
 import { getPostData } from "@/app/projects/_Server/PostManager";
+import CenterUnderline from "@/components/fancy/text/underline-center";
 import matter from "gray-matter";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export type ProjectPostcardProps = {
@@ -42,7 +44,19 @@ export default function ProjectPostcard(
                         loading="lazy"
                         className={`w-full drop-shadow-xs pointer-events-none`}
                     />
-                    <p className={`text-xl text-center`}>{metadata.title}</p>
+                    <div className={`flex flex-1 w-full items-center justify-between`}>
+                        <div className={`w-1/5`}></div>
+                        <p className={`w-3/5 text-xl text-center flex-wrap`}>{metadata.title}</p>
+                        <Link
+                            href={`/projects/${id}`}
+                            draggable={false}
+                            className={`w-1/5 text-right ${gloriaHallelujah.className} text-secondary`}
+                        >
+                            <CenterUnderline>
+                                View Post
+                            </CenterUnderline>
+                        </Link>
+                    </div>
                 </div>
             </>
         );

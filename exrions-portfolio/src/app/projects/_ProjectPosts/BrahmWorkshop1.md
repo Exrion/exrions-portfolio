@@ -36,10 +36,10 @@ The slides were made with a coding example in mind, so they are minimal and have
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSC5Lb0UkPR0j3op2iDYZKpt_vN5S-imkKjSQcqNmHDk6bf9HiIx1HXJcwkOx_JI3C6u4CC84_4pG4b/pubembed?start=false&loop=true&delayms=3000" frameborder="0" width="100%" height="400" allowfullscreen={true} mozallowfullscreen={true} webkitallowfullscreen={true}></iframe>
 
 ## Running the workshop
-I also managed to invite my friend Nick to join me in the workshop! Together we taught the participants the basics of C#!
+I also managed to invite my friend [Nick](https://www.linkedin.com/in/nicholas-cwh/) to join me in the workshop! Together we taught the participants the basics of C#!
 ![Workshop Picture](/posts/BrahmWorkshop1_InAction.jpeg)
 It was a really fun experience to learn and discover along with the attendees about the workshop. They learned coding skills and I learned so much about teaching, organising, time management, and more. It was a really good experience and I look forward to hosting more workshops with Brahm Centre.
 # Outcome
 This workshop has a small turn out due to internal changes at Brahm Centre and a lack of time to advertise the workshop to a wider audience. However, the smaller group was perfect as it was my first time running any kind of workshop and it gave me the experience needed to improve on my future workshops. 
 
-Nick helped out massively thanks to his prior experience with voluntary workshops and his technical background. Do check him out if you have the time!
+[Nick](https://www.linkedin.com/in/nicholas-cwh/) helped out massively thanks to his prior experience with voluntary workshops and his technical background. Do check him out if you have the time!
