@@ -1,7 +1,7 @@
 ---
-date: 11/2/2026
+date: 11/2/2025
 
-title: Chord Dynamics
+title: Chord Dynamics (Cover Image WIP)
 
 description: Chord Dynamics is a project made for my portfolio. It's main focus was for me to design modern UI for an interest of mine, audio. Featuring an web interface and a music streaming app. It also served as an avenue for me to learn more about logo design sincce I had no prior experience.
 
