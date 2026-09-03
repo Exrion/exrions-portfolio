@@ -7,11 +7,11 @@ description: A collection of my graphic design work over my time at DigiPen, whe
 
 brief: A collection of my graphic design work over my time at DigiPen, where I first began on self-learning graphic design.
 
-thumbnail_url: "/posts/GraphicDesign_Cover.jpg"
+thumbnail_url: "/posts/GraphicDesign_Cover.png"
 
 tags: ["graphic design", "figma"]
 ---
-![Cover Image](/posts/GraphicDesign_Cover.jpg)
+![Cover Image](/posts/GraphicDesign_Cover.png)
 Graphic Design Work - A collection of my graphic design work over my time at DigiPen, where I first began on self-learning graphic design.
 # Design in the Wild (Tekken) 
 This is a user research project regarding kiosks, we chose the Tekken arcade machine! Below are the contents and section pages!
