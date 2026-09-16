@@ -28,6 +28,10 @@ There was not a lot of information on the internet regarding how to create a rhy
 So I did what any less than sane programmer would. I built the rest of it from scratch. 
 It was a really tough journey but really rewarding in the end, I've learned so much, know what to do and what not to; and I can proudly say that I have figured out how to create a rhythm game!
 ## Progress
+### Game Design 
+While I had a smaller contribution to the design of this project, I spent some time working with the team to ideate some dynamics and systems within the game to create goals and interest throughout the game. 
+
+For this project, there are political (dance) parties. Each party has its own unique ability. 
 ### Core Rhythm Engine
 ![Early Development](/posts/JustBeatIt_EarlyDev.jpg)
 Early builds of the core rhythm engine consisted of a proximity-based hit detection system. Simply put, it checks the distance between the tap point (static in nature), and the next closest beat within a given threshold. This system worked in theory, but was not accurate according to my early testers, most of whom were avid rhythm gamers.
@@ -35,6 +39,16 @@ Early builds of the core rhythm engine consisted of a proximity-based hit detect
 This then led to my rebuild of the core rhythm engine to use timings to track the time difference between the tap and the next closest beat within the beat hit threshold. 
 ### Hold Beats
 Held beats were tough to create. I had to register the press and release of the buttons, which would also require visual and code feedback for if it was released halfway, or held beyond its lifetime. Much of this resulted in a ton of time spent making held beats feel and look right, while working correctly in the codebase. 
+### Architecture
+The game was designed with a simple workflow. 
+1. Initialise the game systems and various managers. 
+2. Load audio and data files (beat maps).
+3. Let the player take control.
+When the political (dance) party is selected, the game does a hot-reload of the map files and audio files. This is due to the editor existing outside of this user task flow, on the main menu. This allows us to always update and hot-load any newly made maps, edited maps, or deleted maps when on the level select screen.
+
+Maps are loaded from .json files. They contain data regarding simple things like name, ID, audio file path, and actual level data. 
+
+The core engine of the rhythm game runs timings based on the progress of the audio file. This maintains accurate sync between beatmap progress and the audio. We track our beatmaps through determining the crotchet of the beatmap by using the bpm and the duration of the song. Since the beat map file stores beats in an array, each crotchet is one index in the array. We can then run it accordingly. 
 ### Map Editor
 This was also the first time I created a game with a serialisation and deserialisation system for data persistence. With it, I added a in-game map editor that lets players create, update, and delete beatmaps in runtime. It also allowed me to learn a lot about Unity's UI Toolkit for more functional than aesthetic purposes. 
 
