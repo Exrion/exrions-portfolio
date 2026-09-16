@@ -60,7 +60,7 @@ In the end, the system was complete, but was slightly buggy underload. Meaning w
 
 [Cai Xuan](https://www.linkedin.com/in/exrion/) - Tech Lead, Designer, UI/UX
 # Thoughts and Reflection
-
+Overall, the project was a fun experience, and my first foray into system design. It afforded me a lot of experience regarding systems and dynamics. It also gave me a chance to experiment with complex economy systems and optimising pathfinding node lookup techniques. 
 # Contact and Download
 If you wish to hear more about the game we made, do contact me through the social links in [About](https://exrions-portfolio.vercel.app/about).
 
