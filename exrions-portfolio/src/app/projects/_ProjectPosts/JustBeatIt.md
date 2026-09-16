@@ -58,4 +58,7 @@ I would like to thank my amazing team for making this game possible! My two crac
 # Thoughts and Reflection
 This project helped me grow so much in my programming skills, as well as teamwork and communication skills. I could say it was both a blessing and a curse. But I have improved so much since we first undertook this project!
 
-If you wish to try out the game or hear more about it, do contact me through the social links in [About](https://exrions-portfolio.vercel.app/about).
+# Contact and Download
+If you wish to hear more about the game we made, do contact me through the social links in [About](https://exrions-portfolio.vercel.app/about).
+
+Otherwise, you may also download the game from the [itch.io](https://exrionlexom.itch.io/just-beat-it).
